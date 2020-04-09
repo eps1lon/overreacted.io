@@ -52,7 +52,7 @@ This `useInterval` isn’t a built-in React Hook; it’s a [custom Hook](https:/
 ```jsx
 import React, { useState, useEffect, useRef } from 'react';
 
-function useInterval(callback, delay) {
+function useInterval(callback, delay = null) {
   const savedCallback = useRef();
 
   // Remember the latest callback.
@@ -75,7 +75,8 @@ function useInterval(callback, delay) {
 
 *(Here’s a [CodeSandbox demo](https://codesandbox.io/s/105x531vkq) in case you missed it earlier.)*
 
-**My `useInterval` Hook sets up an interval and clears it after unmounting.** It’s a combo of `setInterval` and `clearInterval` tied to the component lifecycle.
+**My `
+` Hook sets up an interval and clears it after unmounting.** It’s a combo of `setInterval` and `clearInterval` tied to the component lifecycle.
 
 Feel free to copy paste it in your project or put it on npm.
 
